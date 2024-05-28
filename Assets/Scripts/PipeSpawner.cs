@@ -6,7 +6,7 @@ public class PipeSpawner : MonoBehaviour
 {
     public PipeConfiguration pipeConfig;
     public GameObject pipePrefab;
-    public float spawnInterval = 2f;
+    public float spawnInterval = 1f;
     public float pipeSpeed = 1f;
 
     private float timer;
@@ -25,8 +25,9 @@ public class PipeSpawner : MonoBehaviour
             timer = spawnInterval;
         }
 
-        MovePipes(); // Llamar al método para mover las tuberías
+        MovePipes();
     }
+
 
     private void SpawnPipe()
     {
@@ -36,14 +37,14 @@ public class PipeSpawner : MonoBehaviour
 
     private void MovePipes()
     {
-        // Obtener todas las tuberías en la escena
         GameObject[] pipes = GameObject.FindGameObjectsWithTag("Pipe");
 
-        // Mover cada tubería hacia la izquierda
         for (int i = 0; i < pipes.Length; i++)
         {
             pipes[i].transform.Translate(Vector3.left * pipeSpeed * Time.deltaTime);
         }
     }
+    
+
 }
 

@@ -10,6 +10,13 @@ public class GameOverHandler : MonoBehaviour
         if (viewportPosition.x < 0 || viewportPosition.y < 0 || viewportPosition.y > 1)
         {
             Debug.Log("Game Over");
+            PauseGame();
+
         }
+    }
+    void PauseGame()
+    {
+        Time.timeScale = 0; 
+        Debug.Log("El pájaro ha salido del rango de la cámara. Juego pausado.");
     }
 }
