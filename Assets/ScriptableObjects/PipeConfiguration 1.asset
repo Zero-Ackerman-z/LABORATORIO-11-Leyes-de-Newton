@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4afdd5444abc9a04e8a2012eda457e66, type: 3}
   m_Name: PipeConfiguration 1
   m_EditorClassIdentifier: 
-  minHeight: -2
-  maxHeight: 2
+  minHeight: 9
+  maxHeight: 5
   pipeSpacing: 4
